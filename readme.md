@@ -110,3 +110,35 @@ attached to GameObjects. Each adds specific behavior or data.
 * Unity Multiplayer Serives ( NetCode) : Provides tools to implement multiplayer features like synchroizing GameObject states across clients.
 
 * Photon/Unet: Popular third-party solutions to implement neteorking features sucha s matchmaking, lobbies, and in-game synchronization.
+
+## 15. Optimization Techniques
+
+* Occlusion Culling: Ensure only visible objects are rendered, saving performance.
+
+* level of Detail (LOD): Adjusts the detail level of distance objects, reducing geometry and texture resolution.
+
+
+*Profiling: Unity's Profiler helps measure performace, identify bottlenecks in CPU, GPU, memory, and rendering.
+
+## 16. Asset Store
+
+* Unity's Asset Store provides a marketplace where developers can purchase or download free assests like models, textures, scripts, and plugins to speed up development.
+
+## 17. Build and Deployment
+
+* Build Settings: Allow you to select target platforms ( Windows , Android, iOS, WebGL etc.) and configure game settings before creating the executable.
+
+* Player Settings : Adjust game-specific setting such as resolution, splash screen, and icon.
+
+
+## 18. Package Manager 
+
+* used to manage external Uity packages and libraries. IT allows you to impoet features like Post-Processing, Cinemachine, or even third-party tools directly into the project.
+
+## 19. Version Control Integration
+
+* Unity Collaborate: An easy-to-use version control system for small teams built into Unity.
+
+Git: The most popular version control system, Commonly integrated with Unity projects using .gitignore for Unity-specific files.
+
+
