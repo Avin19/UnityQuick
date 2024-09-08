@@ -141,5 +141,10 @@ attached to GameObjects. Each adds specific behavior or data.
 
 Git: The most popular version control system, Commonly integrated with Unity projects using .gitignore for Unity-specific files.
 
+# `OnEnable()` vs `Start()`
 
 [Ouestion](/Question.md)
+
+# `Update()` vs `FixedUpdate()` vs `LateUpdate()`
+
+[Question](/Question2.md)

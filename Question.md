@@ -81,4 +81,38 @@ public class ExampleScript : Monobehaviour {
 |Aspect| OnEnable() | Start()|
 |------|------------|--------|
 |When it is called ?| Every time the object/Script is  enabled.|Once, when the object is first initialized and enabled.|
+|Number of Calls| Can be called multiple times ( each time it's enabled).| Called only once it the object's lifetime.|
+|Common USe Cases| Resetting variables, subscribing to events.|One-time initialization, setting up references.|
+|Runs before ...| Runs before `Start()`.| Runs after `OnEnable()`, but before the first frame.|
+|Paired with|Typically paired with `OnDisable()` for cleanup.|Not typically paired, used for initialization only.|
+
+# Example Use Case for Both:
+
+```Csharp
+
+public class ExampleScript : MonoBehaviour 
+{
+    void OnEnable() {
+        Debug.Log("OnEnable called.");
+// Subscribe to event listeners or start logic that needs to happen when the object is enabled
+    }
+
+    void Start()
+    {
+        Debug.Log("Start called Once");
+        // one-time initialization logic
+    }
+    void OnDisable()
+    {
+        Debug.Log("OnDisable Called.");
+        //Unsubscribe from event listerers or stop logic when the object is disabled
+    }
+}
+```
+
+### In this example:
+
+- `OnEnable()` will be called everytime the object is enabled, and is useful for restarting or resuming certain behaviors.
+- `Start()` will be called only once after the object is first initialized , for one-time setup.
+- `OnDisable()` will be called everytime the object is disabled, allowing you to clean up or pause behaviors.
 
