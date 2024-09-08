@@ -1,0 +1,7 @@
+[CreateAssetMenu(fileName = " NewCharacterStats", menuName = " CharacterStats")]
+public class CharacterStats : ScriptableObject
+{
+    public int health;
+    public int attackPower;
+
+}
