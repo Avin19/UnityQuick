@@ -34,4 +34,25 @@
         - Serialized Fields: Even private fileds can be made editable in the Unity Inspector using [SerializeField]
 
         [Link](/Variable.cs)
+    ## 3. Unity's inout System
+
+    * Old Input System: Use Input.GetAxis(), Inout.GetKey(), and Input.GetMouseButton() to handle player inout.
+
+        [Link](/Input.cs)
+    * New Input System: More complex and flexible , allowing support for multiple input devices ( gamepad, touch, mouse). It uses action maps and events for inout detection.
+
+    ## 4. Coroutines
+
+    * Coroutines allow you to pause the execution of a function and resum it after a certain condition is met or a time delay has passed.
+
+    * Useful for creating timed actions, such as animations, delays between attacks, or loading screens.
+
+    [Link](/DelayAction.cs)
+
+## 5. Physics and Rigidbody Control
+
+    * Unity's Physics System uses the Rigidbody component to enavle physocs behavior. Scripts can apply forces, set velocity, or handle physics-based movement. 
+
+    [Link](/Rigidbody.cs)
+
 
