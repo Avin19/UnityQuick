@@ -112,7 +112,33 @@ For example, a base class Charcter can be inherited by Player and Enemy.
     [Link](/JsonSerial.cs)
 
 ## 12. Object Pooling 
+    
     * Object pooling is a performace optimization technique to resue objects ( like enemies or bullets) rather than creating and destorying them.
 
+ [Link](/ObjectPooling.cs)
 
-    
+ ## 13.Custom Inspector and Editor Scripts
+
+ * You can extend Unity's Editor by creating custom inspectors to visualize and edit data in ways that are more intuitive for your specific game.
+    [Link](/MyEditorScript.cs)
+
+## 14. Managing Time
+
+* Time.deltaTime : Represents the time that has passed since the last frame. It's essentail for frame-rate independent movement and animations.
+
+```console 
+
+transform.psoition += Vector3.forward * speed * Time.DeltaTime;
+
+```
+
+### Best Practices
+
+* Keep Your Code Modular : Break down large scripts into smaller, reusable components.
+
+* Avoid Frequent calls to Find() or GetComponent() : Cache reference to objects and component to optimize performance. 
+
+* Use Coroutines Wisely : Avoid too many Coroutines running Simultaneously, as theu canadd up and slow down performacne.
+
+* Optimize Update() : Move any code that doesn't need to run every frame outside of Update(), and use FixedUpdate() for Physics-related code.
+
