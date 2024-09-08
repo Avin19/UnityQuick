@@ -23,3 +23,15 @@
     - OnDestroy() : Called when the object is destoryed, good for cleanup logic.
 
     -On triggerEnter() / OnCollisionEnter() : Handles physic-based interactions such as when objects collide or enter trigger zones.
+
+    ## 2. Variables and Access Modifiers
+
+    * Public vs Private Varaible : 
+        - public : Varaible accessible bt other classes and shown in the Unity Inspectper.
+
+        - private: Varaible that are only accesssible within the script and are hidden from the Inspector unless explicitly serialized.
+
+        - Serialized Fields: Even private fileds can be made editable in the Unity Inspector using [SerializeField]
+
+        [Link]{/Variable.cs}
+
