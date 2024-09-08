@@ -33,5 +33,5 @@
 
         - Serialized Fields: Even private fileds can be made editable in the Unity Inspector using [SerializeField]
 
-        [Link]{/Variable.cs}
+        [Link](/Variable.cs)
 
