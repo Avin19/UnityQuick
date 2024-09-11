@@ -72,9 +72,30 @@ In this eample , force are applied to a `Rigidbody` in `FixedUpdate()` ,  ensuri
 * Often used for tasks that need to occur after all other objects have been update.
 * Especially useful for adjusting the camera, character animations, or any dependencies between objects.
 
+## Use Cases:
+* Camera movement and following (e.g., Following a character after thrir movent is updated in `Update()`).
+
+* Smoothing and final adjustments after all caluclations have been made in `Update()`.
+* Adjusting UI or visual elements that reply on the final positions of game objects.
+
+```Csharp
+
+void LateUpdate()
+{
+    // Camera follows the player's position after the player has moved 
+    transform.position = player.transfrom.position + new Vector3(0,5,-10);
+}
+
+```
+In this example, the camera follows the player's position after the player has moved (Updated in `Update()`).
 
 
-
-
+|Aspect| Update()| FixedUpdate() | LateUpate()|
+|------|----------|--------------|------------|
+|Timing| Called once per framce ( frame-rate dependent).| Called at fixed intervals ( physica time step).| Called once per frame, after all Update() methods.|
+|Primary Use | Non- phsica updates: input handling, animation , etc. | Physics updates : applying forces , velcoity , collisions. | Camera following, post- processing , dependent updates. |
+| Best for | Frame- dependent game logic an user interaction. | Consistent physica calculations and movement.| Actions that rely on the final state of objects ( e.g., camera).
+|Frame-rate independent ? | No, varies with frame rate. Yes, runs on fiexed time intervals. | No, but runs after `Update()` for dependent actions.|
+| Common Examples | Player movement, firing, UI updates. | Physics- based movment, collision detection. | Camera following, animation adjustments.|
 
 
