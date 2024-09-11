@@ -99,3 +99,36 @@ In this example, the camera follows the player's position after the player has m
 | Common Examples | Player movement, firing, UI updates. | Physics- based movment, collision detection. | Camera following, animation adjustments.|
 
 
+``` Csharp 
+public class PlayerController : MonoBehaviour {
+    public Transfomr cameraTrasnfrom;
+    private Rigidbosy rb;
+
+    void Start()
+    {
+        rb= GetComponent<Rididbody>();
+
+    }
+    void Update()
+    {
+        // Handle input , e.g , Jumping
+        if(Input.GetKEyDown(KEyCode.Sapce))
+        {
+            Debug.Log(" Jump !");
+
+        }
+    }
+    void FixedUpdate()
+    {
+        // Handle physic-based movement
+        flaot move= Inout.GetAxis("Vertical");
+        rb.AddForce(Vector3.forward * move * 10f);
+    }
+    void LateUpdate()
+    {
+        // Camera follows the player 
+        cameraTransfrom.position = transfrom.position + new vector(0,5,-10);
+    }
+}
+```
+
